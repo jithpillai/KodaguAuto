@@ -40,11 +40,13 @@ h1, h2, h3, h4 {
 }
 p { margin: 0 0 1em; }
 
+html, body { overflow-x: hidden; }
+
 .container {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(20px, 5vw, 40px);
 }
 
 .section {
@@ -493,6 +495,12 @@ p { margin: 0 0 1em; }
 @media (max-width: 720px) {
   .main-nav, .header-actions .icon-btn.call-desktop { display: none; }
   .nav-toggle { display: flex; }
+  .header-inner { gap: 12px; }
+  .brand { gap: 10px; min-width: 0; }
+  .brand img { height: 38px; flex-shrink: 0; }
+  .brand-text strong { font-size: 15.5px; white-space: nowrap; }
+  .brand-text span { font-size: 9px; }
+  .header-actions { gap: 8px; }
   .main-nav {
     position: fixed; inset: 68px 16px auto 16px;
     background: #fff; border-radius: 16px; box-shadow: var(--shadow);
@@ -512,4 +520,13 @@ p { margin: 0 0 1em; }
   .cta-banner { flex-direction: column; align-items: flex-start; }
   .hero-stats { gap: 22px; }
   .section { padding: 64px 0; }
+  .hero-inner { padding-top: 40px; }
+  .hero-visual img { width: min(280px, 68%); }
+  .hero-visual .glow { width: 260px; height: 260px; }
+  .hero-badge { left: 4%; bottom: 4%; padding: 12px 14px; }
+  .hero { overflow: hidden; }
+}
+
+@media (max-width: 440px) {
+  .header-inner .btn.btn-primary.btn-sm { display: none; }
 }
