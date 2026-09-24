@@ -192,7 +192,11 @@ html, body { overflow-x: hidden; }
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 40px;
-  padding: 96px 0 84px;
+  padding: 96px 24px 84px;
+}
+
+@media (max-width: 980px) {
+  .hero-inner { padding-left: 20px; padding-right: 20px; }
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
